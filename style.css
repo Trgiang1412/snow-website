@@ -9,7 +9,7 @@
     background-image: url(img/tabble.jpg);
     background-size: cover;
     position: relative;
-    z-index: 2;
+    z-index: -1;
 }
 
 .hearder::after {
@@ -21,7 +21,7 @@
     height: 100%;
     background: black;
     opacity: 0.5;
-    z-index: 26;
+    z-index: 2;
 }
 
 .hearder-menu {
@@ -251,12 +251,14 @@ p {
     height: 300px;
     background: black;
 }
-.nagative{
+
+.nagative {
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .bar {
     border: 2px solid white;
     background: white;
@@ -267,15 +269,18 @@ p {
     border-radius: 30px;
     cursor: pointer;
 }
-.bar:hover{
+
+.bar:hover {
     background: chartreuse;
     transition: 0.6s;
 }
-input[ name="r"]{
+
+input[ name="r"] {
     position: absolute;
     visibility: hidden;
 
 }
+
 .slides {
     width: 300%;
     display: flex;
@@ -290,15 +295,17 @@ input[ name="r"]{
     z-index: 999999;
     color: white;
     text-align: center;
-    
+
 }
 
-#r1:checked ~ .s1{
-  margin-left: 0;
+#r1:checked~.s1 {
+    margin-left: 0;
 }
-#r2:checked ~ .s1{
-   margin-left: 50%;
+
+#r2:checked~.s1 {
+    margin-left: 50%;
 }
-#r3:checked ~ .s1{
- margin-left: 100%;
+
+#r3:checked~.s1 {
+    margin-left: 100%;
 }
