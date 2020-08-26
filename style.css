@@ -3,13 +3,14 @@
     margin: 0;
 }
 
+
 .hearder {
     width: 1350px;
     height: 680px;
     background-image: url(img/tabble.jpg);
     background-size: cover;
     position: relative;
-    z-index: -1;
+    z-index: 1;
 }
 
 .hearder::after {
@@ -19,8 +20,10 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: black;
-    opacity: 0.5;
+    /* background: black;
+    opacity: 0.5; */
+    /* thay thế opacity bằng linear-gradient */
+    background: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     z-index: 2;
 }
 
@@ -30,7 +33,9 @@
     position: fixed;
     width: 1350px;
     height: 90px;
-    background: #636e72;
+    /* background: #636e72; */
+    /* đổi thuộc tính của background */
+    background: transparent;
     opacity: 0.4;
     display: flex;
     justify-content: center;
@@ -60,12 +65,14 @@
 }
 
 .list-menu ul li a {
-    color: white;
+    color: #bfbfbf;
+    /* color: red */
+    /* đổi màu của thẻ a */
     text-decoration: none;
 }
 
 ul li a:hover {
-    color: red;
+    color: white;
 }
 
 /* hết menu fixed */
@@ -82,15 +89,19 @@ ul li a:hover {
 
 h4 {
     margin-bottom: 20px;
+    /* fix lại font-size */
+    font-size: 30px;
 }
 
 .size {
+    /* fix lại font-size */
     font-size: 60px;
 }
 
 .font-gg {
     font-family: 'Dancing Script', cursive;
-    font-size: 70px;
+    /* fix lại font-size */
+    font-size: 50px;
 }
 
 .button {
@@ -102,10 +113,13 @@ h4 {
     color: white;
     background: black;
     border: none;
+    /* thêm transition và cursor: pointer */
+    transition: all 0.5s ease;
+    cursor: pointer;
 }
 
 .button-size:hover {
-    background: #95a5a6;
+    background: #bfbfbf;
 }
 
 /* .................................................... */
