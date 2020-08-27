@@ -3,6 +3,13 @@
     margin: 0;
 }
 
+:root {
+    --white: white;
+    --font-dancing: 'Dancing Script', cursive;
+    --font-montserrat: 'Montserrat', sans-serif;
+    ;
+}
+
 .hearder {
     width: 1350px;
     height: 680px;
@@ -71,7 +78,7 @@
 }
 
 ul li a:hover {
-    color: white;
+    color: var(--white);
 }
 
 /* hết menu fixed */
@@ -83,13 +90,13 @@ ul li a:hover {
     text-decoration: none;
     top: 35%;
     left: 20%;
-    color: white;
+    color: var(--white);
 }
 
 .scroll-down {
     display: block;
     position: absolute;
-    color: white;
+    color: var(--white);
     text-decoration: none;
     text-align: center;
     font-size: 2rem;
@@ -108,14 +115,14 @@ ul li a:hover {
 
 .pe-7s-angle-down {
     display: inline-block;
-    font-family: "Pe-icon-7-stroke";
-    speak-as: none;
+    font-family: "Pe-icon-7-stroke" !important;
+    speak: none;
     font-style: normal;
     font-weight: 400;
     font-variant: normal;
     text-transform: none;
     line-height: 1;
-    -webkit-font-smooth: antialiased;
+    -webkit-font-smoothing: antialiased;
     cursor: pointer;
 }
 
@@ -135,7 +142,7 @@ h4 {
 }
 
 .font-gg {
-    font-family: 'Dancing Script', cursive;
+    font-family: var(--font-dancing);
     /* fix lại font-size */
     font-size: 50px;
 }
@@ -174,7 +181,7 @@ h4 {
     width: 850px;
     font-size: 18px;
     margin-left: 200px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-montserrat);
     margin-top: 20px;
     font-weight: 10;
 }
@@ -265,7 +272,7 @@ h4 {
 .text-tranform {
     position: absolute;
     text-align: center;
-    color: white;
+    color: var(--white);
     left: 20%;
     bottom: 30%;
     z-index: 99999;
@@ -310,8 +317,8 @@ p {
 }
 
 .bar {
-    border: 2px solid white;
-    background: white;
+    border: 2px solid var(--white);
+    background: var(--white);
     width: 5px;
     height: 5px;
     margin-left: 4px;
@@ -340,7 +347,7 @@ input[ name="r"] {
     margin-left: 350px;
     margin-top: 100px;
     z-index: 999999;
-    color: white;
+    color: var(--white);
     text-align: center;
 }
 
