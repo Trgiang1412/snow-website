@@ -46,6 +46,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.5s ease;
+}
+
+.hearder-menu.sticky {
+    /* padding: 5px 100px; */
+    background: var(--white);
+}
+
+
+.hearder-menu.sticky ul li a {
+    color: #000;
+}
+
+.hearder-menu.sticky .picture-text {
+    color: #000;
 }
 
 .picture-text {
