@@ -151,6 +151,11 @@ h4 {
     margin-bottom: 20px;
     /* fix lại font-size */
     font-size: 30px;
+    height: 70px;
+}
+
+span.animate__animated.animate__fadeInDown.display-4 {
+    height: 10px;
 }
 
 .size {
@@ -165,7 +170,7 @@ h4 {
 }
 
 .button {
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
 .button-size {
