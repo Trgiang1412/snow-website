@@ -5,8 +5,8 @@
 
 :root {
     --white: white;
-    --font-dancing: 'Dancing Script', cursive;
-    --font-montserrat: 'Montserrat', sans-serif;
+    --font-dancing: "Dancing Script", cursive;
+    --font-montserrat: "Montserrat", sans-serif;
 }
 
 .hearder {
@@ -29,7 +29,8 @@
     /* background: black;
     opacity: 0.5; */
     /* thay thế opacity bằng linear-gradient */
-    background: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    background: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
+        linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     z-index: 2;
 }
 
@@ -55,7 +56,6 @@
 
     z-index: 5;
 }
-
 
 .hearder-menu.sticky ul li a {
     color: #000;
@@ -125,8 +125,8 @@ ul li a:hover {
     line-height: 54px;
     border-radius: 50%;
     border: 1px solid;
-    opacity: .6;
-    transition: opacity .5s;
+    opacity: 0.6;
+    transition: opacity 0.5s;
     z-index: 5;
 }
 
@@ -141,16 +141,10 @@ ul li a:hover {
     cursor: pointer;
 }
 
-
 h4 {
     margin-bottom: 20px;
     /* fix lại font-size */
     font-size: 30px;
-    height: 70px;
-}
-
-span.animate__animated.animate__fadeInDown.display-4 {
-    height: 10px;
 }
 
 .size {
@@ -248,7 +242,7 @@ span.animate__animated.animate__fadeInDown.display-4 {
 
 .note-2 {
     font-size: 50px;
-    font-family: 'Libre Caslon Display', serif;
+    font-family: "Libre Caslon Display", serif;
 }
 
 .note-3 {
@@ -356,7 +350,7 @@ p {
     transition: 0.6s;
 }
 
-input[ name="r"] {
+input[name="r"] {
     position: absolute;
     visibility: hidden;
 }
@@ -421,7 +415,6 @@ input[ name="r"] {
     margin-top: 100px;
     margin: auto;
     overflow: hidden;
-
 }
 
 .box-img {
@@ -437,7 +430,6 @@ input[ name="r"] {
     position: absolute;
     width: 340px;
     height: 221px;
-
 }
 
 .button-img {
