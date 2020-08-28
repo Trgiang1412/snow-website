@@ -3,25 +3,34 @@
     margin: 0;
 }
 
+:root {
+    --white: white;
+    --font-dancing: 'Dancing Script', cursive;
+    --font-montserrat: 'Montserrat', sans-serif;
+}
+
 .hearder {
     width: 1350px;
     height: 680px;
     background-image: url(img/tabble.jpg);
     background-size: cover;
+    background-attachment: fixed;
     position: relative;
-    z-index: 2;
+    z-index: 1;
 }
 
-.hearder::after {
+.hearder::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: black;
-    opacity: 0.5;
-    z-index: 26;
+    /* background: black;
+    opacity: 0.5; */
+    /* thay thế opacity bằng linear-gradient */
+    background: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    z-index: 2;
 }
 
 .hearder-menu {
@@ -30,11 +39,30 @@
     position: fixed;
     width: 1350px;
     height: 90px;
-    background: #636e72;
-    opacity: 0.4;
+    /* background: #636e72; */
+    /* đổi thuộc tính của background */
+    /* background: transparent;
+    opacity: 0.4; */
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.5s ease;
+}
+
+.hearder-menu.sticky {
+    /* padding: 5px 100px; */
+    background: var(--white);
+
+    z-index: 5;
+}
+
+
+.hearder-menu.sticky ul li a {
+    color: #000;
+}
+
+.hearder-menu.sticky .picture-text {
+    color: #000;
 }
 
 .picture-text {
@@ -60,37 +88,80 @@
 }
 
 .list-menu ul li a {
-    color: white;
+    color: #bfbfbf;
+    /* color: red */
+    /* đổi màu của thẻ a */
     text-decoration: none;
 }
 
 ul li a:hover {
-    color: red;
+    color: var(--white);
 }
 
 /* hết menu fixed */
 
 .text-menu {
     position: absolute;
-    z-index: 30;
+    z-index: 2;
     text-align: center;
     text-decoration: none;
-    top: 20%;
+    top: 35%;
     left: 20%;
-    color: white;
+    color: var(--white);
+}
+
+.scroll-down {
+    display: block;
+    position: absolute;
+    color: var(--white);
+    text-decoration: none;
+    text-align: center;
+    font-size: 2rem;
+    bottom: 65px;
+    left: 49%;
+    margin-left: -25px;
+    width: 50px;
+    height: 50px;
+    line-height: 54px;
+    border-radius: 50%;
+    border: 1px solid;
+    opacity: .6;
+    transition: opacity .5s;
+    z-index: 5;
+}
+
+.pe-7s-angle-down {
+    display: inline-block;
+    font-family: "Pe-icon-7-stroke" !important;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+}
+
+.pe-7s-angle-down::before {
+    content: "\e682"
 }
 
 h4 {
     margin-bottom: 20px;
+    /* fix lại font-size */
+    font-size: 30px;
 }
 
 .size {
+    /* fix lại font-size */
     font-size: 60px;
 }
 
 .font-gg {
-    font-family: 'Dancing Script', cursive;
-    font-size: 70px;
+    font-family: var(--font-dancing);
+    /* fix lại font-size */
+    font-size: 50px;
 }
 
 .button {
@@ -102,10 +173,13 @@ h4 {
     color: white;
     background: black;
     border: none;
+    /* thêm transition và cursor: pointer */
+    transition: all 0.5s ease;
+    cursor: pointer;
 }
 
 .button-size:hover {
-    background: #95a5a6;
+    background: #bfbfbf;
 }
 
 /* .................................................... */
@@ -124,7 +198,7 @@ h4 {
     width: 850px;
     font-size: 18px;
     margin-left: 200px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-montserrat);
     margin-top: 20px;
     font-weight: 10;
 }
@@ -158,6 +232,7 @@ h4 {
     color: white;
     margin-right: 10px;
 }
+
 .far {
     font-size: 50px;
     color: white;
@@ -221,7 +296,7 @@ h4 {
 .text-tranform {
     position: absolute;
     text-align: center;
-    color: white;
+    color: var(--white);
     left: 20%;
     bottom: 30%;
     z-index: 99999;
@@ -257,15 +332,17 @@ p {
     height: 300px;
     background: black;
 }
-.nagative{
+
+.nagative {
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .bar {
-    border: 2px solid white;
-    background: white;
+    border: 2px solid var(--white);
+    background: var(--white);
     width: 5px;
     height: 5px;
     margin-left: 4px;
@@ -273,73 +350,81 @@ p {
     border-radius: 30px;
     cursor: pointer;
 }
-.bar:hover{
+
+.bar:hover {
     background: chartreuse;
     transition: 0.6s;
 }
-input[ name="r"]{
+
+input[ name="r"] {
     position: absolute;
     visibility: hidden;
-
 }
+
 .slides {
     width: 300%;
     display: flex;
-
 }
 
 .slide {
-
     width: 100%;
     margin-left: 350px;
     margin-top: 100px;
     z-index: 999999;
-    color: white;
+    color: var(--white);
     text-align: center;
-    
 }
 
-#r1:checked ~ .s1{
-  margin-left: 0;
+#r1:checked~.s1 {
+    margin-left: 0;
 }
-#r2:checked ~ .s1{
-   margin-left: 50%;
+
+#r2:checked~.s1 {
+    margin-left: 50%;
 }
-#r3:checked ~ .s1{
- margin-left: 100%;
+
+#r3:checked~.s1 {
+    margin-left: 100%;
 }
-.img1{
+
+.img1 {
     width: 160px;
     height: 180px;
     margin-left: 50px;
 }
-.sticker{
+
+.sticker {
     margin-top: 450px;
     margin-left: 100px;
 }
-.text-p3{
+
+.text-p3 {
     text-align: center;
     margin-top: 50px;
 }
-.lg-text{
+
+.lg-text {
     font-size: 40px;
 }
-.p-text{
+
+.p-text {
     margin-top: 20px;
     font-size: 18px;
     color: #34495e;
 }
+
 /* ....................................... */
-.img-opaciti{
+.img-opaciti {
     width: 1110px;
     height: 495px;
     display: flex;
     margin-top: 100px;
     margin: auto;
     overflow: hidden;
-   
+
 }
-.box-img{
+
+.box-img {
     position: relative;
     width: 370px;
     height: 438px;
@@ -347,47 +432,55 @@ input[ name="r"]{
     margin-left: 30px;
     animation: tr99 2s ease-in infinite;
 }
-.poster{
+
+.poster {
     position: absolute;
     width: 340px;
     height: 221px;
-    
+
 }
-.button-img{
+
+.button-img {
     position: absolute;
     font-size: 13px;
     top: 40%;
-    margin-left:20px;
+    margin-left: 20px;
 }
-button{
-    padding: 5px 20px 5px 20px ;
+
+button {
+    padding: 5px 20px 5px 20px;
     background: black;
     color: white;
 }
-.text-img-button{
+
+.text-img-button {
     width: 250px;
     margin-left: 40px;
     margin-top: 250px;
 }
-.it{
+
+.it {
     font-weight: 50;
     font-size: 13px;
     margin-top: 10px;
 }
-.text-it{
+
+.text-it {
     font-size: 18px;
 }
+
 @keyframes tr99 {
-    0%{
-       transform: translateX(0px);
+    0% {
+        transform: translateX(0px);
     }
-    20%{
+
+    20% {
         transform: translateX(-438px);
     }
-    40%{
+
+    40% {
         transform: translateX(-976px);
     }
-    60%{
-        
-    }
+
+    60% {}
 }
