@@ -26,7 +26,7 @@
 
 .hearder-menu {
     position: absolute;
-    z-index: 5;
+    z-index: 9999999999999;
     position: fixed;
     width: 1350px;
     height: 90px;
@@ -156,6 +156,12 @@ h4 {
 .fas {
     font-size: 50px;
     color: white;
+    margin-right: 10px;
+}
+.far {
+    font-size: 50px;
+    color: white;
+    margin-right: 10px;
 }
 
 /* ................................................. */
@@ -301,4 +307,87 @@ input[ name="r"]{
 }
 #r3:checked ~ .s1{
  margin-left: 100%;
+}
+.img1{
+    width: 160px;
+    height: 180px;
+    margin-left: 50px;
+}
+.sticker{
+    margin-top: 450px;
+    margin-left: 100px;
+}
+.text-p3{
+    text-align: center;
+    margin-top: 50px;
+}
+.lg-text{
+    font-size: 40px;
+}
+.p-text{
+    margin-top: 20px;
+    font-size: 18px;
+    color: #34495e;
+}
+/* ....................................... */
+.img-opaciti{
+    width: 1110px;
+    height: 495px;
+    display: flex;
+    margin-top: 100px;
+    margin: auto;
+    overflow: hidden;
+   
+}
+.box-img{
+    position: relative;
+    width: 370px;
+    height: 438px;
+    padding: 20px;
+    margin-left: 30px;
+    animation: tr99 2s ease-in infinite;
+}
+.poster{
+    position: absolute;
+    width: 340px;
+    height: 221px;
+    
+}
+.button-img{
+    position: absolute;
+    font-size: 13px;
+    top: 40%;
+    margin-left:20px;
+}
+button{
+    padding: 5px 20px 5px 20px ;
+    background: black;
+    color: white;
+}
+.text-img-button{
+    width: 250px;
+    margin-left: 40px;
+    margin-top: 250px;
+}
+.it{
+    font-weight: 50;
+    font-size: 13px;
+    margin-top: 10px;
+}
+.text-it{
+    font-size: 18px;
+}
+@keyframes tr99 {
+    0%{
+       transform: translateX(0px);
+    }
+    20%{
+        transform: translateX(-438px);
+    }
+    40%{
+        transform: translateX(-976px);
+    }
+    60%{
+        
+    }
 }
