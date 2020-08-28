@@ -52,6 +52,8 @@
 .hearder-menu.sticky {
     /* padding: 5px 100px; */
     background: var(--white);
+
+    z-index: 5;
 }
 
 
@@ -100,7 +102,7 @@ ul li a:hover {
 
 .text-menu {
     position: absolute;
-    z-index: 5;
+    z-index: 2;
     text-align: center;
     text-decoration: none;
     top: 35%;
